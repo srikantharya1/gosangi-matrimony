@@ -178,53 +178,74 @@
 		</div>
 	</div> -->
 
-	<div id="gtco-counter" class="gtco-bg gtco-cover gtco-counter" style="background-image:url(images/about.jpg);">
-		<div class="overlay"></div>
-		<div class="gtco-container">
-			<div class="row">
-				<div class="display-t">
-					<div class="display-tc">
-						<div class="col-md-3 col-sm-6 animate-box">
-							<div class="feature-center">
-								<span class="icon">
-									<i class="fas fa-female" aria-hidden="true"></i> <!-- Use a generic gender icon for brides -->
-								</span>
-								<span class="counter js-counter" data-from="0" data-to="10" data-speed="5000" data-refresh-interval="50">1</span>
-								<span class="counter-label">వధువులు</span> <!-- Brides -->
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 animate-box">
-							<div class="feature-center">
-								<span class="icon">
-									<i class="fas fa-male" aria-hidden="true"></i> <!-- Male icon for grooms -->
-								</span>
-								<span class="counter js-counter" data-from="0" data-to="30" data-speed="5000" data-refresh-interval="50">1</span>
-								<span class="counter-label">వరులు</span> <!-- Grooms -->
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 animate-box">
-							<div class="feature-center">
-								<span class="icon">
-									<i class="fas fa-heart" aria-hidden="true"></i> <!-- Heart icon -->
-								</span>
-								<span class="counter js-counter" data-from="0" data-to="15" data-speed="5000" data-refresh-interval="50">1</span>
-								<span class="counter-label">విజయవంతమైన సంబంధాలు</span> <!-- Successful Relationships -->
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 animate-box">
-							<div class="feature-center">
-								<span class="icon">
-									<i class="fas fa-users" aria-hidden="true"></i> <!-- Users icon for families -->
-								</span>
-								<span class="counter js-counter" data-from="0" data-to="15" data-speed="5000" data-refresh-interval="50">1</span>
-								<span class="counter-label">సంతోషకరమైన కుటుంబాలు</span> <!-- Happy Families -->
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<div id="gtco-counter" 
+     class="gtco-bg gtco-cover gtco-counter" 
+     style="position: relative; background-image: url(images/about.jpg); background-size: cover; background-position: center;">
+     
+    <!-- Overlay for better readability on top of background image -->
+    <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+
+    <!-- Content that displays counters -->
+    <div class="gtco-container" style="position: relative; z-index: 2;">
+        <div class="row">
+            <div class="display-t">
+                <div class="display-tc">
+                    <div class="col-md-3 col-sm-6 animate-box">
+                        <div class="feature-center">
+                            <span class="icon">
+                                <i class="fas fa-female" aria-hidden="true"></i>
+                            </span>
+                            <span class="counter js-counter" data-from="0" data-to="10" data-speed="5000" data-refresh-interval="50">1</span>
+                            <span class="counter-label">వధువులు</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 animate-box">
+                        <div class="feature-center">
+                            <span class="icon">
+                                <i class="fas fa-male" aria-hidden="true"></i>
+                            </span>
+                            <span class="counter js-counter" data-from="0" data-to="30" data-speed="5000" data-refresh-interval="50">1</span>
+                            <span class="counter-label">వరులు</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 animate-box">
+                        <div class="feature-center">
+                            <span class="icon">
+                                <i class="fas fa-heart" aria-hidden="true"></i>
+                            </span>
+                            <span class="counter js-counter" data-from="0" data-to="15" data-speed="5000" data-refresh-interval="50">1</span>
+                            <span class="counter-label">విజయవంతమైన సంబంధాలు</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 animate-box">
+                        <div class="feature-center">
+                            <span class="icon">
+                                <i class="fas fa-users" aria-hidden="true"></i>
+                            </span>
+                            <span class="counter js-counter" data-from="0" data-to="15" data-speed="5000" data-refresh-interval="50">1</span>
+                            <span class="counter-label">సంతోషకరమైన కుటుంబాలు</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // Check if the screen width is 768px or less
+    if (window.innerWidth <= 768) {
+        document.getElementById("gtco-counter").style.backgroundImage = "url('images/feature.jpg')";
+    }
+
+    // Optional: Update the image on window resize
+    window.addEventListener("resize", function() {
+        if (window.innerWidth <= 768) {
+            document.getElementById("gtco-counter").style.backgroundImage = "url('images/feature.jpg')";
+        } else {
+            document.getElementById("gtco-counter").style.backgroundImage = "url('images/about.jpg')";
+        }
+    });
+</script>
 	
 	<!-- <div id="gtco-testimonial">
 		<div class="gtco-container">

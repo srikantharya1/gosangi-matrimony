@@ -394,7 +394,6 @@ h1, h2, h3, h4, h5, h6, figure {
   background-position: center center;
   background-attachment: fixed; /* Optional: makes it look nice on desktops */
   background-repeat: no-repeat;
-  padding: 100px 0; /* Adjust padding for mobile responsiveness */
   text-align: center;
 }
 #gtco-counter .overlay {
