@@ -168,6 +168,31 @@
 			
 		</div>
 	</div>
+	<script>
+		document.querySelector('form').addEventListener('submit', function(event) {
+			event.preventDefault(); // Prevent the default form submission
+			
+			// Retrieve form data based on element IDs
+			var surname = document.getElementById('fname').value;
+			var name = document.getElementById('lname').value;
+			var mobile = document.getElementById('email').value;
+			var subject = document.getElementById('subject').value;
+			var message = document.getElementById('message').value;
+			
+			// WhatsApp contact number and company name
+			var whatsappNumber = '919866783703';
+			var companyName = 'Gosangi Matrimony';
+			
+			// Format the message with line breaks
+			var formattedMessage = `Hi👋🏻 *${companyName},*\nMy details are mentioned below. Call📞 me back.\n*Surname:* ${surname}\n*Name:* ${name}\n*Mobile:* ${mobile}\n*Subject:* ${subject}\n*Message:* ${message}`;
+			
+			// Create the WhatsApp URL
+			var whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(formattedMessage)}`;
+			
+			// Open WhatsApp
+			window.open(whatsappURL, '_blank');
+		});
+	</script>
 	
 	<div id="gtco-subscribe">
 		<div class="gtco-container">
