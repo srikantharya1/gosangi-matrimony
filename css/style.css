@@ -21,7 +21,7 @@ p {
 .back-to-top {
     position: fixed;
     display: none;
-    left: 45px;
+    left: 15px;
     bottom: 18px;
     z-index: 99;
 }
