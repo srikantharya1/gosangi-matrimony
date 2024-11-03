@@ -450,3 +450,8 @@ p {
     padding-right: 0;
     border-right: none;
 }
+
+.blur-effect {
+    filter: blur(20px); /* Adjust the blur amount as needed */
+    transition: filter 0.3s ease; /* Optional: smooth transition on hover */
+}
